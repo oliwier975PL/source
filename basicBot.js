@@ -1212,6 +1212,7 @@
                     name: chat.un
                 }));
                 return false;
+                }
             }
             for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
                 if (msg === basicBot.chatUtilities.spam[j]) {
@@ -1222,7 +1223,7 @@
                 }
             }
             return false;
-        }
+        },
         chatUtilities: {
             chatFilter: function(chat) {
                 var msg = chat.message;
