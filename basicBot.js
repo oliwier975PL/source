@@ -258,7 +258,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: 'GCbot',
+            botName: 'GC2Bot',
             language: 'polish',
             chatLink: 'https://rawgit.com/oliwier975PL/source/master/lang/en.json',
             scriptLink: 'https://rawgit.com/oliwier975PL/source/master/basicBot.js',
