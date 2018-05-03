@@ -1222,7 +1222,7 @@
                 }
             }
             return false;
-        },
+        }
         chatUtilities: {
             chatFilter: function(chat) {
                 var msg = chat.message;
