@@ -243,16 +243,16 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209];
+    var botCreatorIDs = [3851534, 4105209, 31730421];
 
     var basicBot = {
-        version: '2.12.0',
+        version: '6.9',
         status: false,
-        name: 'basicBot',
+        name: 'GCBot',
         loggedInID: null,
-        scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
+        scriptLink: 'https://rawgit.com/oliwier975PL/source/master/basicBot.js',
         cmdLink: 'http://git.io/245Ppg',
-        chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
+        chatLink: 'https://rawgit.com/oliwier975PL/source/master/lang/en.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -260,8 +260,8 @@
         settings: {
             botName: 'basicBot',
             language: 'english',
-            chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
-            scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
+            chatLink: 'https://rawgit.com/oliwier975PL/source/master/lang/en.json',
+            scriptLink: 'https://rawgit.com/oliwier975PL/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -270,7 +270,7 @@
             autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
-            maximumAfk: 120,
+            maximumAfk: 60,
             afkRemoval: true,
             maximumDc: 60,
             bouncerPlus: true,
@@ -282,16 +282,16 @@
             maximumCycletime: 10,
             voteSkip: false,
             voteSkipLimit: 10,
-            historySkip: false,
+            historySkip: true,
             timeGuard: true,
-            strictTimeGuard: true,
-            maximumSongLength: 10,
+            strictTimeGuard: false,
+            maximumSongLength: 7,
             autodisable: false,
-            commandCooldown: 30,
+            commandCooldown: 10,
             usercommandsEnabled: true,
-            thorCommand: false,
+            thorCommand: true,
             thorCooldown: 10,
-            skipPosition: 3,
+            skipPosition: 2,
             skipReasons: [
                 ['theme', 'This song does not fit the room theme. '],
                 ['op', 'This song is on the OP list. '],
@@ -299,13 +299,14 @@
                 ['mix', 'You played a mix, which is against the rules. '],
                 ['sound', 'The song you played had bad sound quality or no sound. '],
                 ['nsfw', 'The song you contained was NSFW (image or sound). '],
+                ['bieber', 'The song you contained was NSFW (image or sound). '],
                 ['unavailable', 'The song you played was not available for some users. ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
-            motdEnabled: false,
-            motdInterval: 5,
-            motd: 'Temporary Message of the Day',
+            motdEnabled: true,
+            motdInterval: 10,
+            motd: 'Mam nadzieję, że się dobrze bawicie! Pamiętajcie, że wszystkie pytania możecie kierować do administracji!',
             filterChat: true,
             etaRestriction: false,
             welcome: true,
@@ -317,12 +318,12 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json',
-                BANNED: 'https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/oliwier975PL/custom/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/oliwier975PL/custom/master/blacklists/OPlist.json',
+                BANNED: 'https://rawgit.com/oliwier975PL/custom/master/blacklists/BANNEDlist.json'
             }
         },
         room: {
@@ -906,7 +907,7 @@
 
             if (botCreatorIDs.indexOf(user.id) > -1) {
               console.log(true);
-                API.sendChat('@'+user.username+' '+':sparkles: :bow: :sparkles:');
+                API.sendChat('@'+user.username+' '+'Witaj Creator-sama, twa wola jest dla mnie rozkazem :bow:');
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
               console.log(botCreatorIDs);
@@ -1171,6 +1172,7 @@
             if (!basicBot.settings.filterChat) return false;
             if (basicBot.userUtilities.getPermission(chat.uid) >= API.ROLE.BOUNCER) return false;
             var msg = chat.message;
+            var words = msg.split(' ');
             var containsLetters = false;
             for (var i = 0; i < msg.length; i++) {
                 ch = msg.charAt(i);
@@ -1194,11 +1196,22 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            if (msg === 'skip') {
+            for (var k = 0; k < words.length; k++) {
+            for (var j = 0; j < basicBot.chatUtilities.swear.length; j++) {
+                if (words[k] === basicBot.chatUtilities.swear[j]) {
+                    API.sendChat(subChat(basicBot.chat.swear, {
+                        name: chat.un
+                    }));
+                    return true;
+                }
+            }
+            }
+            for (var k = 0; k < words.length; k++) {
+            if (words[k] === 'skip') {
                 API.sendChat(subChat(basicBot.chat.askskip, {
                     name: chat.un
                 }));
-                return true;
+                return false;
             }
             for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
                 if (msg === basicBot.chatUtilities.spam[j]) {
@@ -1352,8 +1365,8 @@
                 'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
-            curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+            swear: [
+                'kurwa', 'kurwo', 'kurwe', 'kurwy', 'kurwiszony', 'kurva', 'kurvo', 'kurve', 'kurvy'
             ]
         },
         connectAPI: function() {
