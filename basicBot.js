@@ -244,6 +244,7 @@
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
     var botCreatorIDs = [3851534, 4105209, 31730421];
+    var Oliwier = [19149612];
 
     var basicBot = {
         version: '6.9',
@@ -486,6 +487,7 @@
                 if (typeof obj === 'object') u = obj;
                 else u = API.getUser(obj);
                 if (botCreatorIDs.indexOf(u.id) > -1) return 9999;
+                if (Oliwier.indexOf(u.id) > -1) return 9999;
 
                 if (u.gRole < 3000) return u.role;
                 else {
