@@ -981,7 +981,28 @@
         eventDjadvance: function(obj) {
             if (!obj.dj) return;
             if (basicBot.settings.autowoot) {
-                $('#woot').click(); // autowoot
+                $.ajax({
+        type: 'GET',
+        url: 'https://plug.dj/_/rooms/state',
+        error: e => {
+            API.chatLog(`Can't get room data ${e}`);
+        },
+        success: roomData => {
+            $.ajax({
+                type: 'POST',
+                url: 'https://plug.dj/_/votes',
+                data: JSON.stringify({
+                    direction: 1,
+                    historyID: roomData.data[0].playback.historyID,
+                }),
+                dataType: 'json',
+                contentType: 'application/json',
+                error: err => {
+                    API.chatLog(`Can't vote ${err}`);
+                }
+            });
+        }
+    });
             }
 
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
@@ -1497,7 +1518,28 @@
             API.sendChat('/cap ' + basicBot.settings.startupCap);
             API.setVolume(basicBot.settings.startupVolume);
             if (basicBot.settings.autowoot) {
-                $('#woot').click();
+                $.ajax({
+        type: 'GET',
+        url: 'https://plug.dj/_/rooms/state',
+        error: e => {
+            API.chatLog(`Can't get room data ${e}`);
+        },
+        success: roomData => {
+            $.ajax({
+                type: 'POST',
+                url: 'https://plug.dj/_/votes',
+                data: JSON.stringify({
+                    direction: 1,
+                    historyID: roomData.data[0].playback.historyID,
+                }),
+                dataType: 'json',
+                contentType: 'application/json',
+                error: err => {
+                    API.chatLog(`Can't vote ${err}`);
+                }
+            });
+        }
+    });
             }
             if (basicBot.settings.startupEmoji) {
                 var emojibuttonoff = $('.icon-emoji-off');
