@@ -243,6 +243,7 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
+    var botMender  = 'Mikєy';
     var botCreatorIDs = [3851534, 4105209, 6425281];
     var Oliwier = [19149612, 31730421];
 
@@ -981,7 +982,7 @@
         eventDjadvance: function(obj) {
             if (!obj.dj) return;
             if (basicBot.settings.autowoot) {
-                $.ajax({
+                $.ajax({ 
         type: 'GET',
         url: 'https://plug.dj/_/rooms/state',
         error: e => {
