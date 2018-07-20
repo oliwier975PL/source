@@ -908,7 +908,7 @@
 
             if (botCreatorIDs.indexOf(user.id) > -1) {
               console.log(true);
-                API.sendChat('@'+user.username+' '+'Witaj Creator-sama, twa wola jest dla mnie rozkazem :bow:');
+                API.sendChat('@'+user.username+' '+'witaj ponownie!');
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
               console.log(botCreatorIDs);
