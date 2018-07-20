@@ -243,8 +243,8 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209, 31730421];
-    var Oliwier = [19149612];
+    var botCreatorIDs = [3851534, 4105209];
+    var Oliwier = [19149612, 31730421];
 
     var basicBot = {
         version: '6.9',
@@ -294,14 +294,12 @@
             thorCooldown: 10,
             skipPosition: 2,
             skipReasons: [
-                ['theme', 'This song does not fit the room theme. '],
-                ['op', 'This song is on the OP list. '],
-                ['history', 'This song is in the history. '],
-                ['mix', 'You played a mix, which is against the rules. '],
-                ['sound', 'The song you played had bad sound quality or no sound. '],
-                ['nsfw', 'The song you contained was NSFW (image or sound). '],
-                ['bieber', 'The song you contained was NSFW (image or sound). '],
-                ['unavailable', 'The song you played was not available for some users. ']
+                ['theme', 'Ta piosenka nie apsuej do tematu pokoju. '],
+                ['op', 'Ta piosenak jest na liście OP. '],
+                ['history', 'Inna wersja tej piosenki była niedawno grana. '],
+                ['sound', 'Dźwięk lub obraz mająkijową jakość. '],
+                ['nsfw', 'Ta piosenka jest NSFW! '],
+                ['unavailable', 'Piosenka była niedostępna dla niektórych użytkowników. ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
