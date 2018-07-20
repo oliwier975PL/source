@@ -6,19 +6,19 @@
 
 Email enquiries: [hi[at]benzi[dot]io](mailto:hi@benzi.io)
 
-### Usage
+### Użycie
 
-Bookmark the following code. To run the bot, click the bookmark.
+Dodaj do zakładek poniższy kod. Aby uruchomić bota, naciśnij w zapisaną zakładkę.
 
 ```
-javascript:(function(){$.getScript('https://rawgit.com/basicBot/source/master/basicBot.js');})();
+javascript:(function(){$.getScript('https://rawgit.com/oliwier975PL/source/master/basicBot.js');})();
 ```
 
-If this does not work, go to [basicBot.js](https://raw.githubusercontent.com/oliwier975PL/source/master/basicBot.js) and copy paste its content into your console (accessible in chrome by pressing F12) when on plug.dj in your community.
+Jeśli to nie działa, udaj się do [basicBot.js](https://raw.githubusercontent.com/oliwier975PL/source/master/basicBot.js) i wklej zawartość do konsoli przeglądarki (dostępna w chrome naciskając F12) kiedy jesteś w swoim pokoju społeczności w plug.dj.
 
-### Commands
+### Komendy
 
-These can be found in [the commands list](commands.md).
+Mogą zostać znalezione w [lista komend](commands.md).
 
 ### Blacklists
 
@@ -26,69 +26,69 @@ Examples of blacklists can be found in [the customization repository](https://gi
 You can add blacklists in the settings of the bot via the methods given in that same repository. See below for more information.
 
 
-### Extending functionality and custom default settings
+### Rozszerzanie funkcjonalności i niestandardowe domyślne ustawienia.
 
-basicBot can be customized to fit your needs. Please refer to [the customization repository](https://github.com/basicBot/custom) for more info.
-Please do not try to if you are not confident in your JavaScript capabilities.
+basicBot może być dostosowany do twoich potrzeb. Udaj się do [the customization repository](https://github.com/basicBot/custom) po więcej informacji.
+Nie próbuj, jeśli nie jesteś pewien swoich możliwości w języku JavaScript.
 
 <!--
 ### basicBot Chrome Extension
 
-[Get the Official basicBot Chrome Extension](https://chrome.google.com/webstore/detail/basicbot/bjinmbkeneigmkkkpcmcokphbjkepeie)
+[ZDOBĄDŹ OFICJALNE ROZSZERZENIE BASICBOTA W CHROME WEBSTORE](https://chrome.google.com/webstore/detail/basicbot/bjinmbkeneigmkkkpcmcokphbjkepeie)
 -->
 
 ### Credits
 
-| Developers |
+| Deweloperzy |
 |:----------:|
 | [![Benzi](https://www.gravatar.com/avatar/a9a9e27f874dadfaf0e21e8ecf8e9833.jpg?s=100)](https://github.com/Benzi) |
 | **[Benzi](https://github.com/Benzi)** |
 
-#### Special thanks :sparkles:
+#### Specjalne podziękowania dla: :sparkles:
 
 - Fungus: His Tastybot has been a source of inspiration for most of the features, and his help with coding problems has been invaluable to make this bot.
 - TAT, Origin and other Litebot contributors: Their Litebot has inspired features like Roulette.
 - Henchman: Never knew this undertaking would give me a friend too.
 
-#### Translations :globe_with_meridians:
+#### Tłumacze :globe_with_meridians:
 
-I would like to thank everyone who have contributed in translating the bot via [Transifex](https://www.transifex.com/basicbot/basicbot) :pray:
+Dziękuje wszystkim ,którzy przyczynili się w tłumaczeniu bota przez [Transifex](https://www.transifex.com/basicbot/basicbot) :pray:
 
-| Translator | Languages |
+| Tłumacz | Język |
 |:----------:|:---------:|
-| 3GoneS | Lithuanian |
-| ajdin291 | Serbian |
-| Bart Boom | Dutch |
-| cirktv| Dutch |
-| clone287 | Turkish |
-| DivinityRSPS | German |
-| [Filly](https://github.com/fillylumi) | French |
-| Gradure | Dutch |
-| H0LYbear | Turkish |
-| hadi555 | German |
-| [Hasztagg](https://github.com/Hasztagg) | Polish |
-| Helvijs Baumanis | Latvian |
-| Inga Deveiko | Latvian |
-| Janis Petrovskis | Latvian |
-| Leopard105 | Czech |
-| linusworld | Chinese (Taiwan) |
-| Liutauras Vaitkus | Lithuanian |
-| Łukasz Strzałek | Polish |
-| [Mikey Wazowsky](https://github.com/MikeyWazowsky) | Polish |
-| [Motel Bible](https://github.com/motelbible) | Portuguese |
-| [NDA](https://github.com/NDAthereal) | French |
-| Patrick H-Hansen | Danish |
-| Rie | Danish |
-| Schokin | Spanish |
-| Shone | Serbian |
-| smt287 | Turkish |
-| Tessi Tess Randysková | Czech |
-| TIGJERUX | Latvian |
-| xMaxist | Dutch |
-| [Yenn](https://twitter.com/tsy_yenn) | Chinese (Taiwan), Malay |
-| Јовев Немања | Serbian |
+| 3GoneS | Litewski |
+| ajdin291 | Serbski |
+| Bart Boom | Holenderski |
+| cirktv| Holenderski |
+| clone287 | Turecki |
+| DivinityRSPS | Niemiecki |
+| [Filly](https://github.com/fillylumi) | Francuski |
+| Gradure | Holenderski |
+| H0LYbear | Turecki |
+| hadi555 | Niemiecki |
+| [Hasztagg](https://github.com/Hasztagg) | Polski |
+| Helvijs Baumanis | Łotewski |
+| Inga Deveiko | Łotewski |
+| Janis Petrovskis | Łotewski |
+| Leopard105 | Czeski |
+| linusworld | Chiński (Taiwan) |
+| Liutauras Vaitkus | Litewski |
+| Łukasz Strzałek | Polski |
+| [Mikey Wazowsky](https://github.com/MikeyWazowsky) | Polski |
+| [Motel Bible](https://github.com/motelbible) | Portugalski |
+| [NDA](https://github.com/NDAthereal) | Francuski |
+| Patrick H-Hansen | Duński |
+| Rie | Duński |
+| Schokin | Hiszpański |
+| Shone | Serbski |
+| smt287 | Turecki |
+| Tessi Tess Randysková | Czeski |
+| TIGJERUX | Łotewski |
+| xMaxist | Holenderski |
+| [Yenn](https://twitter.com/tsy_yenn) | Chiński (Taiwan), Malajski |
+| Јовев Немања | Serbski |
 
-### License
+### Licencja
 
 Copyright &copy; 2014-2018 basicBot
 
