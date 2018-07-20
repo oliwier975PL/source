@@ -243,7 +243,7 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209];
+    var botCreatorIDs = [3851534, 4105209, 6425281];
     var Oliwier = [19149612, 31730421];
 
     var basicBot = {
