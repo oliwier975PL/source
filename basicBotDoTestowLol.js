@@ -245,6 +245,7 @@
     var botMaintainer = 'Benzi';
     var botMender  = 'Mikєy';
     var botCreatorIDs = [3851534, 4105209, 6425281];
+    var Korapt = [14657092];
     var Oliwier = [19149612, 31730421];
 
     var basicBot = {
@@ -906,6 +907,9 @@
 
             }
 
+            if (Korapt.indexOf(user.id) > -1) {
+              console.log(true);
+                API.sendChat('@'+user.username+' '+'Korapt się znowu zepsuł :(');
             if (botCreatorIDs.indexOf(user.id) > -1) {
               console.log(true);
                 API.sendChat('@'+user.username+' '+'witaj Creator-sama, twa wola jest moim rozkazem :bow:');
