@@ -247,7 +247,7 @@
     var botCreatorIDs = [3851534, 4105209, 6425281];
     var Korapt = [14657092];
     var Oliwier = [19149612, 31730421];
-    var OliwierDwa [19149612];
+    var OliwierDwa = [19149612];
 
     var basicBot = {
         version: '6.9',
