@@ -247,6 +247,7 @@
     var botCreatorIDs = [3851534, 4105209, 6425281];
     var Korapt = [14657092];
     var Oliwier = [19149612, 31730421];
+    var OliwierDwa [19149612];
 
     var basicBot = {
         version: '6.9',
@@ -913,6 +914,9 @@
             } else if (Korapt.indexOf(user.id) > -1) {
               console.log(true);
                 API.sendChat('@'+user.username+' '+'Korapt się znowu zepsuł :(');
+            } else if (OliwierDwa.indexOf(user.id) > -1) {
+              console.log(true);
+                API.sendChat('@'+user.username+' '+'( ͡° ͜ʖ ͡°)');
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
               console.log(botCreatorIDs);
