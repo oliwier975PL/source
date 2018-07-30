@@ -913,10 +913,10 @@
                 API.sendChat('@'+user.username+' '+'witaj Creator-sama, twa wola jest moim rozkazem :bow:');
             } else if (Korapt.indexOf(user.id) > -1) {
               console.log(true);
-                API.sendChat('@'+user.username+' '+'Korapt się znowu zepsul :(');
+                API.sendChat('@'+user.username+' '+'Korapt sie znowu zepsul :(');
             } else if (OliwierDwa.indexOf(user.id) > -1) {
               console.log(true);
-                API.sendChat('@'+user.username+' '+'Hello darkness,ąłćżźę my old friend');
+                API.sendChat('@'+user.username+' '+'Hello darkness, my old friend');
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
               console.log(botCreatorIDs);
